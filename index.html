@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="lock.png">
+   <!--Website built and designed by BossRye-->
+   <!--Site web conçu et réalisé par BossRye-->
+   <!--BossRye تم تصميم و تطوير الموقع من-->
+</head>
+<body>
+
+
+ <div class="box">
+    <h1>Password Generator</h1>
+
+    <label>
+
+        Password length
+        <input type="number" id="length" value="12" min="1">
+    </label>
+                    <br><br>
+
+    <label> 
+        <input type="checkbox" id="lowercase" checked>
+        Lowercase
+    </label>         
+                       <br>
+    
+    <label> 
+        <input type="checkbox" id="uppercase" checked>
+        Uppercase
+    </label>         
+                       <br>
+     
+    <label> 
+        <input type="checkbox" id="numbers" checked>
+        Numbers
+    </label>         
+                       <br>
+     
+    
+    <label> 
+        <input type="checkbox" id="symbols" checked>
+      Symbols
+    </label>         
+                       <br><br>
+    <button id="btn"> Generate Password</button> 
+    
+    <h2 id="result"></h2>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
