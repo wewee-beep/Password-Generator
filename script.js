@@ -1,3 +1,10 @@
+const copybtn = document.getElementById("copybtn");
+const hidebtn = document.getElementById("hidebtn");
+const copied  = document.getElementById("copied");
+
+let currentPassword = "";
+let hidden = false;
+
 const btn = document.getElementById("btn");
 const result = document.getElementById("result");
 btn.onclick = function(){
@@ -16,11 +23,36 @@ btn.onclick = function(){
         symbols
     );
 
-    result.textContent = password;
+   currentPassword = password;
+
+   if(hidden){result.textContent = "•".repeat(password.length)} else{result.textContent = password;};
+
 }
 
+hidebtn.onclick = function(){
+    if(currentPassword === "") return;
+    hidden = !hidden;
+    if(hidden){
+        result.textContent = "•".repeat(currentPassword.length);
+        hidebtn.textContent = "🙈"; // We appologize for how lazy the developer is, its literally 4am.
+    }
+   else{
+    result.textContent = currentPassword;
+    hidebtn.textContent = "👁";
+   } 
+}
 
+copybtn.onclick = function(){
+    if(currentPassword === "") return;
 
+    navigator.clipboard.writeText(currentPassword);
+    copied.textContent = "Copied!";
+
+    setTimeout(function(){
+        copied.textContent = "";
+    },1500);
+
+}
 
 
 

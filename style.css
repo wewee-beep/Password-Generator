@@ -60,13 +60,66 @@ button{
 button:hover{background:#2957d8;}
 
 #result{
-    margin-top:20px;
+    margin-top:0px;
     background:#353535;
-    padding:15px;
+    padding:1px;
     border-radius:8px;
-    min-height:55px;
+    min-height:70px;
     display:flex;
     justify-content:center;
     align-items:center;
     word-break:break-all;
+    flex: 1;
+    
 }
+
+.passbox{
+    margin-top:20px;
+    padding:15px;
+
+    background:#353535;
+    border-radius:10px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+#copybtn,
+#hidebtn{
+    padding:8px 14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:royalblue;
+
+    color:white;
+
+    transition:.25s;
+}
+
+#copybtn:hover,
+#hidebtn:hover{
+    background:#2957d8;
+}
+#copied{
+    text-align:center;
+    color:lime;
+
+    margin-top:10px;
+
+    height:20px;
+}
+
+.btns{
+    display: flex;
+    justify-content: column;
+    gap: 10px;
+    
+}
+btns:hover{flex: 1;}
