@@ -50,7 +50,7 @@ copybtn.onclick = function(){
 
     setTimeout(function(){
         copied.textContent = "";
-    },1500);
+    },540);
 
 }
 
@@ -89,8 +89,4 @@ const Ǝnumbers   = true;
 const Ǝsymbols   = true;
 
 const password = generate(length, Ǝlowercase, Ǝuppercase, Ǝnumbers, Ǝsymbols);
-
-console.log(`Generated password: ${password}`);
-
-
 const generatebtn = document.getElementById("btn")
